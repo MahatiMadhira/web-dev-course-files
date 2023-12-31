@@ -28,62 +28,58 @@
       height: 100vh;
     }
     .container {
-      height: 748px;
-      width: 748px;
+      height: 410px;
+      width: 430px;
       display: grid;
       background-color: #000;
-      grid-template-columns: 320px 198px 153px 50px;
-      grid-template-rows: 414px 130px 155px 22px;
-      gap: 9px;
+      grid-template-columns: 75px 300px 35px;
+      grid-template-rows: 150px 150px 37.5px 42.5px;
+      gap: 10px;
     }
     .item {
-      background-color: #F0F1EC;
+      background-color: whitesmoke;
     }
     .red {
-      background-color: #E72F24;
+      background-color: #e91a0f;
+      grid-area: 1/2/3/4;
     }
     .white1 {
-      grid-column: span 3;
+      grid-area: 1/1/2/2;
     }
     .white2 {
-      grid-row: span 2;
+      grid-area: 2/1/3/2;
     }
     .white3 {
-      grid-column: span 2;
-      grid-row: span 2;
+      grid-area: 3/2/5/3;
     }
-    .white4 {
-      grid-row: span 2;
+    .blue1 {
+      background-color: #0114c2;
+      grid-area: 3/1/5/2;
+      
     }
-    .blue {
-      background-color: #004592;
-      border-bottom: 10px solid #000;
+    .blue2 {
+      background-color: #0114c2;
+      grid-area: 3/3/4/4;
     }
     .yellow {
-      background-color: #F9D01E;
+      background-color: #f9f91e;
+      grid-area: 4/3/5/4;
     }
-    .black {
-      background-color: #232629;
-      grid-column-start: 3;
-      grid-column-end: 4;
-    }
+    
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
   <div class="container">
-    <div class="item red"></div>
+    
     <div class="item white1"></div>
+    <div class="item red"></div>
     <div class="item white2"></div>
+    <div class="item blue1"></div>
     <div class="item white3"></div>
-
-    <div class="item blue"></div>
-    <div class="item white4"></div>
-
-    <div class="item"></div>
+    <div class="item blue2"></div>
     <div class="item yellow"></div>
-    <div class="item black"></div>
   </div>
 </body>
 
