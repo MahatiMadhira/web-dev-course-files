@@ -1,7 +1,18 @@
 for (var i=0;i<document.querySelectorAll(".drum").length;i++){
     document.querySelectorAll("button")[i].addEventListener("click", function () {
         var buttonInner = this.innerHTML;
-        switch (buttonInner) {
+        makeSound(buttonInner);
+        buttonAnimation(buttonInner);
+    });
+
+    document.addEventListener("keydown", function(event) {
+
+        makeSound(event.key);
+        buttonAnimation(event.key);
+    });
+
+    function makeSound(key) {
+        switch (key) {
             case "w":
                 var audio = new Audio('./sounds/crash.mp3');
                 audio.play();
@@ -33,5 +44,14 @@ for (var i=0;i<document.querySelectorAll(".drum").length;i++){
             default:
             break;
         }   
-    });
+    }
+
+    function buttonAnimation(currentKey) {
+        var activeButton = document.querySelector("." + currentKey);
+        activeButton.classList.add("pressed");
+
+        setTimeout(function() {
+            activeButton.classList.remove("pressed");
+        }, 100);
+    }
 }
