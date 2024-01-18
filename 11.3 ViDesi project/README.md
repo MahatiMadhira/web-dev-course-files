@@ -1,1 +1,0 @@
-# ViDesi Snacks project
